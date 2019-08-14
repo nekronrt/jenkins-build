@@ -32,8 +32,9 @@ node {
 
     stage('Deploy QA'){
       sh "echo deploying image"
-      sh "ssh root@172.27.173.76 "
+      sh "ssh jenkins@172.27.173.33"
       sh "docker rm -f jenkins || true"
-      sh "docker run -d -p 8080:8080 --name jenkins nekronrt/jenkins:${commit_id.substring(0,8)}"
+      sh "docker-compose up -d"
+      //sh "docker run -d -p 8080:8080 --name jenkins nekronrt/jenkins:${commit_id.substring(0,8)}"
     }
 }
