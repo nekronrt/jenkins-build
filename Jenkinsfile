@@ -31,8 +31,12 @@ node {
     }
 
     stage('Deploy QA'){
+      sh "ssh jenkins@172.27.173.33 /bin/bash <<'EOT'"
+      sh "echo "These commands will be run on: $( uname -a )""
+      sh "echo "They are executed by: $( whoami )""
+      sh "EOT"
       sh "echo deploying image"
-      sh "ssh jenkins@172.27.173.33"
+      //sh "ssh jenkins@172.27.173.33"
       sh "docker rm -f jenkins || true"
       sh "docker-compose up -d"
       //sh "docker run -d -p 8080:8080 --name jenkins nekronrt/jenkins:${commit_id.substring(0,8)}"
