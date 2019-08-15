@@ -31,7 +31,7 @@ node {
     }
 
     stage('Deploy QA'){
-      sh "ssh -v jenkins@172.27.173.33 /bin/bash <<'EOT'"
+      sh "ssh -v jenkins@3.82.218.138 /bin/bash <<'EOT'"
       sh "echo "These commands will be run on: $( uname -a )""
       sh "echo "They are executed by: $( whoami )""
       sh "EOT"
