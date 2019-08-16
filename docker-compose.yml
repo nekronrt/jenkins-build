@@ -2,7 +2,7 @@ version: '3'
 
 services:
   jenkins:
-    image: infile/jenkins:lts
+    image: nekronrt/jenkins:lts
     user: root
     container_name: jenkins
     ports:
