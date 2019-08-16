@@ -31,10 +31,12 @@ node {
     }
 
     stage('Deploy QA'){
-      sh "ssh -v jenkins@3.82.218.138 /bin/bash <<'EOT'"
-      sh "echo "These commands will be run on: $( uname -a )""
-      sh "echo "They are executed by: $( whoami )""
-      sh "EOT"
+      sh "ssh -v jenkins@3.82.218.138 /bin/bash" //<<'EOT'"
+      //sh "echo "These commands will be run on: $( uname -a )""
+      //sh "echo "They are executed by: $( whoami )""
+      //sh "EOT"
+      sh "git clone https://github.com/nekronrt/jenkins-build.git"
+      sh "cd jenkins-build"
       sh "echo deploying image"
       //sh "ssh jenkins@172.27.173.33"
       sh "docker rm -f jenkins || true"
