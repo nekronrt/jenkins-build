@@ -1,4 +1,4 @@
-# Jenkins
+#Jenkins
 
   Jenkins up and running in a docker container.
 
@@ -9,7 +9,7 @@
 
   The jenkins_home it's mapped to a localhost location for persistent storage, the container docker sock is also mapped to the host docker sock.
 
-## Quickstart
+##Quickstart
 
   clone the repository, go to the project's root and type:
 
