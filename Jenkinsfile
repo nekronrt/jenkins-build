@@ -35,6 +35,7 @@ node {
       //sh "echo "These commands will be run on: $( uname -a )""
       //sh "echo "They are executed by: $( whoami )""
       //sh "EOT"
+      sh "pwd"
       sh "git clone https://github.com/nekronrt/jenkins-build.git"
       sh "cd jenkins-build"
       sh "echo deploying image"
