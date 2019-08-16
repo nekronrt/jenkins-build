@@ -32,6 +32,6 @@ node {
 
     stage('Deploy QA'){
       sh "echo deploying..."
-      sh "ssh -v root@3.87.251.15 'bash -s' < deploy.sh"
+      sh "ssh -v -i id_rsa root@3.87.251.15 'bash -s' < deploy.sh"
     }
 }
