@@ -33,3 +33,5 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-co
 RUN usermod -aG docker jenkins
 
 USER jenkins
+
+RUN sudo gpasswd -a jenkins docker
