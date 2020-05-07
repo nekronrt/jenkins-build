@@ -14,7 +14,7 @@
   clone the repository, go to the project's root and type:
 
         ```
-        docker build -t infile/jenkins .
+        docker build -t nekronrt/jenkins .
 
         docker-compose up -d
         ```
