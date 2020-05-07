@@ -4,7 +4,7 @@
       Once the server is up and running, credentials and plugins configured, we need to create a pipeline project to automatize the clone of the repository to Jenkins server, build image and publish it of the docker hub repository
 
 ###  Pipeline
-      In the dasgboard page of jenkins server, select New Item from the left panel
+      In the dashboard page of jenkins server, select New Item from the left panel
         Type a name for the project.
         Select Pipeline.
         pres Ok button.
